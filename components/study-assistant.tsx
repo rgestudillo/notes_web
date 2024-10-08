@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { useChat, Message } from 'ai/react'
 import { Mic, StopCircle, Upload, Trash2 } from 'lucide-react'
-import pdfToText from "react-pdftotext";
 
 export function StudyAssistantComponent() {
   const [isRecording, setIsRecording] = useState(false)
@@ -87,14 +86,14 @@ export function StudyAssistantComponent() {
   }
 
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+    // const file = event.target.files?.[0];
+    // if (!file) return;
 
-    pdfToText(file)
-      .then((fullText) => {
-        setPdfText(fullText);
-      })
-      .catch((error) => console.error("Failed to extract text from pdf", error));
+    // pdfToText(file)
+    //   .then((fullText) => {
+    //     setPdfText(fullText);
+    //   })
+    //   .catch((error) => console.error("Failed to extract text from pdf", error));
   };
 
   const handleChatSubmit = (e: React.FormEvent<HTMLFormElement>) => {
