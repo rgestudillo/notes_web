@@ -7,7 +7,7 @@ export default function Header() {
             <Link href="/" className="flex space-x-3">
                 <FaUsers size={45} className="text-black" />
                 <h1 className="sm:text-3xl text-2xl font-bold ml-2 tracking-tight">
-                    ai-groupings
+                    ai-listener
                 </h1>
             </Link>
             <a

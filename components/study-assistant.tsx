@@ -29,7 +29,7 @@ export function StudyAssistantComponent() {
   })
 
   useEffect(() => {
-    handleInputChange({ target: { value: `Transcript: ${transcript}\n\nPDF Context: ${pdfText}` } } as React.ChangeEvent<HTMLTextAreaElement>)
+    handleInputChange({ target: { value: `Transcript: ${transcript}\n\nPDF Context:  ${pdfText}` } } as React.ChangeEvent<HTMLTextAreaElement>)
   }, [transcript, pdfText, handleInputChange])
 
   const startRecording = async () => {
@@ -124,7 +124,7 @@ export function StudyAssistantComponent() {
         <CardContent>
           <div className="space-y-4">
             <div className="flex justify-between">
-              <label htmlFor="pdf-upload">
+              {/* <label htmlFor="pdf-upload">
                 <Button asChild>
                   <span>
                     <Upload className="mr-2" />
@@ -138,7 +138,7 @@ export function StudyAssistantComponent() {
                 accept="application/pdf"
                 onChange={handleFileUpload}
                 className="hidden"
-              />
+              /> */}
               <Button onClick={isRecording ? stopRecording : startRecording}>
                 {isRecording ? <StopCircle className="mr-2" /> : <Mic className="mr-2" />}
                 {isRecording ? 'Stop Recording' : 'Start Recording'}
